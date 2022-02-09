@@ -1,0 +1,433 @@
+:root {
+
+    --white: #FFFFFF;
+    --black: #212121;
+    --principal: #45b6fe;
+    --secundary: #e60026;
+    --aux: #ff9800;    
+}
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+body{
+    font-size: 16px;    
+    font-family: 'Roboto', sans-serif;
+
+}
+
+*, *::before, *:after {
+    box-sizing: inherit;
+}
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.containerImage{
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.containerImage p{
+    color: white;
+}
+.containerImage h1{
+    background-color: #f8fafa7a;
+    padding: 1rem 1rem;
+    outline: 4px solid rgba(255, 255, 255, 0.589);
+    border-radius: 30px;
+}
+.menuBg {
+    background-color: black;
+}
+
+.menuBackstorage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menuBackstorage a{
+    padding: 2rem 1rem 1rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+}
+.formEdit{
+    background-color: grey;
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    color: var(--white);
+}
+
+.formEdit legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    
+    display: block;
+}
+.w-100{
+    flex: 0 0 100%;
+}
+.inputText{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.moveEnd{
+   display: flex;
+   justify-content: flex-end;
+}
+
+.formItems textarea{
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+    height: 10rem;
+}
+
+.calculatorSection{
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    background-color: #9fa0a0;
+    margin-bottom: 3rem;
+    margin-right: 2rem;
+    border-radius: 55px;
+    padding: 2rem;
+}
+
+.direction{
+    padding: 20px 0;
+}
+
+.toggleInput{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+input[type='checkbox']{
+      /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
+.places1{
+    display: inline-flex;
+    padding-right: 10rem;
+    font-size: 2rem;
+}
+.places2{
+    font-size: 2rem;
+}
+
+.sector{
+    padding: 1rem 6rem;
+    margin-bottom: 2rem;
+}
+
+.energy{
+    padding: 1rem 8.5rem;
+    text-align: center;
+}
+
+#show{
+    display: none;
+}
+
+.menuBackstorage a:hover{
+    background-color:var(--aux);
+    
+}
+
+.logo{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    top: 15px;
+
+}
+
+.sectionImage{
+    position: relative;
+    height:45rem;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-image: url(../images/electricidadfondo.png);
+    margin-bottom: 2rem;
+   
+}
+.total{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+
+
+.clientsList{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+@media (max-width: 780px) {
+    .menuBackstorage{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .containerImage h1{
+        outline: transparent;
+    }
+    .logo{
+        display: none;
+    }
+    .colorTextMedia{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .socialMedia{
+        justify-content: space-evenly;
+    }
+    .twitter{
+        display: none;
+    }
+    .facebook{
+        display: none;
+    }
+    .instagram{
+        display: none;
+    }
+    .phoneNumber{
+        display: none;
+    }
+    
+    .clientsList{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+}
+
+@media (max-width: 780px) {
+    .menuBackstorage a{
+        margin-bottom: 0;
+    }   
+}
+
+
+
+/*-----------Clients----------*/
+
+.shadow{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.53);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.53);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.53);
+    background-color: var(--white);
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.carlos{
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.person4Div {
+    display: inline;
+    float: left;
+}
+
+.person4{
+    border-radius: 50%;
+    width: 9rem;
+    height: 9rem;
+    float: left;
+}
+
+.person3{
+    border-radius: 150px;
+    width: 9rem;
+    height: 9rem;
+    float: left;
+}
+
+.mariano{
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.person3Div{
+    display: inline;
+    float: left;
+}
+
+.person2{
+    border-radius: 400px;
+    width: 9rem;
+    height: 9rem;
+    float: left;
+}
+.miriam{
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.person2Div{
+    display: inline;
+    float: left;
+}
+
+.person1{
+    border-radius: 150px;
+    width: 9rem;
+    height: 9rem;
+    float: left;
+}
+.person1Div{
+    display: inline;
+    float: left;
+}
+.raul{
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.space{
+    margin-top: 3rem;
+    
+}
+
+.clientsMain{
+    text-align: center;
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+
+
+.clientsList h3{
+    border-bottom: solid;
+    color:rgb(7, 34, 43);
+    font-size: 2rem;
+}
+
+.clientsDesing{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    background-color: #7caecf;
+    margin-bottom: 3rem;
+    margin-right: 2rem;
+    border-radius: 55px;
+    padding: 2rem;
+}
+
+.titleClients{
+    padding-bottom: 3rem;
+    border-bottom: 2px dashed grey;
+}
+
+.titleDesing{
+    border-left: 5px solid rgb(32,32,151);
+    border-right: 5px solid rgb(32, 32, 151);
+    padding: 0 1rem;
+}
+/*-----------FOOTER--------------*/
+
+.socialMedia{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+    
+}
+
+.wspColor{
+    color: rgb(1, 167, 1);
+}
+
+.phoneNumber{
+    text-decoration: none;
+    padding-left: 5px;
+    vertical-align: 15px;
+    font-size: 2rem;
+}
+
+.facebookColor{
+    color: rgb(1, 1, 175);
+}
+
+.facebook{
+    text-decoration: none;
+    padding-left: 5px;
+    vertical-align: 15px;
+    font-size: 2rem;
+}
+
+.instagramColor{
+    color: #c2089a;
+}
+
+.instagram{
+    font-size: 2rem;
+    text-decoration: none;
+    padding-left: 5px;
+    vertical-align: 15px;
+    color: blue;
+}
+
+.twitterColor{
+    color: rgb(5, 146, 202);
+}
+.colorTextMedia a{
+    color: white;
+}
+.twitter{
+    font-size: 2rem;
+    text-decoration: none;
+    padding-left: 5px;
+    vertical-align: 15px;
+   
+}
+
+.footerEdit{
+    padding: 2rem 0 2rem 0;
+    background-color:rgb(0, 0, 0);
+    
+}
+
+/*------------ICONS--------------*/
+.svg-inline--fa{
+    height: 4rem;
+}
